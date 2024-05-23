@@ -42,6 +42,19 @@
 }
 
 
-.gallery_wrapper {
+.galleryWrapper {
   width: 60vw;
+}
+
+.reactModal {
+  position: absolute;
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+.reactModalOverlay {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
 }

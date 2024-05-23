@@ -1,6 +1,7 @@
 import mushroom_1 from "./assets/mushroom_1.jpeg";
 import mushroom_2 from "./assets/mushroom_2.jpeg";
 import mushroom_3 from "./assets/mushroom_3.jpeg";
+import picos from "./assets/picos.jpeg";
 
 export type PhotoData = {
   src: string;
@@ -31,5 +32,12 @@ export const photosData: PhotoData[] = [
     subtitle: 'Watercolor — 8" x 10"',
     width: 629,
     height: 800,
+  },
+  {
+    src: picos,
+    title: "Picos de Europa",
+    subtitle: 'Watercolor — 14" x 12"',
+    width: 800,
+    height: 678,
   },
 ];

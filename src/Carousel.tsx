@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { useSnapCarousel } from "react-snap-carousel";
 import styles from "./carousel.module.css";
@@ -8,6 +8,7 @@ export interface CarouselProps<T> {
   readonly renderItem: (
     props: CarouselRenderItemProps<T>
   ) => React.ReactElement<CarouselItemProps>;
+  readonly initialItemIndex: number;
   readonly scrollPadding?: boolean;
 }
 
@@ -21,6 +22,7 @@ export interface CarouselRenderItemProps<T> {
 export const Carousel = <T extends any>({
   items,
   renderItem,
+  initialItemIndex,
   scrollPadding = false,
 }: CarouselProps<T>) => {
   const {
@@ -31,8 +33,16 @@ export const Carousel = <T extends any>({
     pages,
     activePageIndex,
     snapPointIndexes,
-    refresh,
   } = useSnapCarousel();
+
+  const [hasShownInitialPhoto, setHasShownInitialPhoto] = useState(false);
+
+  useEffect(() => {
+    if (!hasShownInitialPhoto) {
+      goTo(initialItemIndex, { behavior: "instant" });
+      setHasShownInitialPhoto(true);
+    }
+  }, [hasShownInitialPhoto, setHasShownInitialPhoto, goTo]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -72,7 +82,7 @@ export const Carousel = <T extends any>({
       <div className={styles.pageIndicator}>
         {activePageIndex + 1} / {pages.length}
       </div>
-      <div className={styles.controls}>
+      {/* <div className={styles.controls}>
         <button
           disabled={activePageIndex === 0}
           onClick={() => prev()}
@@ -90,7 +100,7 @@ export const Carousel = <T extends any>({
             >
               <button
                 className={styles.paginationButton}
-                onClick={() => goTo(i)}
+                onClick={() => goTo(i, { behavior: "instant" })}
               >
                 {i + 1}
               </button>
@@ -104,7 +114,7 @@ export const Carousel = <T extends any>({
         >
           {String.fromCharCode(8594)}
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -115,6 +125,7 @@ export interface CarouselItemProps {
   readonly src: string;
   readonly title: string;
   readonly subtitle: string;
+  readonly onBackgroundClick: () => void;
 }
 
 export const CarouselItem = ({
@@ -123,19 +134,26 @@ export const CarouselItem = ({
   src,
   title,
   subtitle,
+  onBackgroundClick,
 }: CarouselItemProps) => {
   return (
     <li
+      onClick={onBackgroundClick}
       className={classNames(styles.item, {
         [styles.snapPoint]: isSnapPoint,
         [styles.itemActive]: isActive,
       })}
     >
-      <div className={styles.itemText}>
+      {/* <div className={styles.itemText}>
         <h2 className={styles.itemTitle}>{title}</h2>
         <p className={styles.itemSubtitle}>{subtitle}</p>
-      </div>
-      <img src={src} className={styles.itemImage} alt="" />
+      </div> */}
+      <img
+        src={src}
+        className={styles.itemImage}
+        alt=""
+        onClick={(event) => event.stopPropagation()}
+      />
     </li>
   );
 };

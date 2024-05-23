@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
 import Gallery, { PhotoClickHandler } from "react-photo-gallery";
 import ReactModal from "react-modal";
 import { photosData, PhotoData } from "./photosData";
@@ -33,11 +33,17 @@ export const ArtGallery = () => {
   }));
 
   return (
-    <div className={"gallery_wrapper"}>
+    <div className={"galleryWrapper"}>
       <Gallery photos={galleryPhotoData} onClick={openLightbox} />
-      <ReactModal isOpen={viewerIsOpen} onRequestClose={closeLightbox}>
+      <ReactModal
+        className={"reactModal"}
+        overlayClassName={"reactModalOverlay"}
+        isOpen={viewerIsOpen}
+        onRequestClose={closeLightbox}
+      >
         <Carousel
           items={carouselItems}
+          initialItemIndex={currentImage}
           renderItem={({ item, index, isActive, isSnapPoint }) => (
             <CarouselItem
               key={index}
@@ -46,24 +52,11 @@ export const ArtGallery = () => {
               src={item.src}
               title={item.title}
               subtitle={item.subtitle}
+              onBackgroundClick={closeLightbox}
             />
           )}
         />
       </ReactModal>
-      {/* <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel
-              currentIndex={currentImage}
-              views={photos.map((x) => ({
-                ...x,
-                srcset: x.srcSet,
-                caption: x.title,
-              }))}
-            />
-          </Modal>
-        ) : null}
-      </ModalGateway> */}
     </div>
   );
 };

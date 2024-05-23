@@ -1,5 +1,6 @@
 .root {
   position: relative;
+  height: 100%;
 }
 
 .scrollPadding {
@@ -16,6 +17,8 @@
   box-sizing: border-box;
   overscroll-behavior: contain;
   padding-inline-start: 0;
+  margin: 0;
+  height: 100%;
 }
 
 .scrollPadding .scroll {
@@ -31,15 +34,8 @@
   width: 100%;
   flex-shrink: 0;
   position: relative;
-  padding-bottom: 56.25%;
   overflow: hidden;
-  /* margin: 0 1%; */
 }
-
-/* .item:first-child,
-.item:last-child {
-  margin: 0;
-} */
 
 .snapPoint {
   scroll-snap-align: start;
@@ -86,10 +82,9 @@
 }
 
 .itemImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 100%;
 }
 
