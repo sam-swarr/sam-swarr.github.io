@@ -35,46 +35,65 @@
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .snapPoint {
   scroll-snap-align: start;
 }
 
+.itemImageTextWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (orientation: landscape) {
+  .itemImageTextWrapper {
+    height: 85%;
+  }
+
+  .itemImage {
+    height: 100%;
+  }
+}
+
+@media (orientation: portrait) {
+  .itemImageTextWrapper {
+    width: 85%;
+  }
+
+  .itemImage {
+    width: 100%;
+  }
+}
+
 .itemText {
-  position: absolute;
+  display: flex;
   z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  color: white;
+  color: #ededed;
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
   text-align: center;
   opacity: 0;
-  transition: all 600ms cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 1000ms cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .itemActive .itemText {
-  transform: translate(-50%, -65%);
   opacity: 1;
 }
 
 .itemTitle {
-  text-transform: uppercase;
-  font-size: 8.5vw;
-  text-shadow: 0.35vw 0.35vw 0vw rgba(0, 0, 0, 0.4);
+  font-size: 0.8em;
+  margin-right: 1em;
 }
 
 .itemSubtitle {
-  text-transform: uppercase;
-  font-size: 2.5vw;
-  text-shadow: 0.2vw 0.2vw 0vw rgba(0, 0, 0, 0.4);
+  font-size: 0.8em;
+  color: #ededed;
   opacity: 0;
-  transition: opacity 500ms cubic-bezier(0.25, 1, 0.5, 1);
-  transition-delay: 350ms;
+  transition: opacity 1000ms cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .itemActive .itemSubtitle {
@@ -82,10 +101,10 @@
 }
 
 .itemImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
+  display: flex;
+  border: 0.5em solid #ededed;
+  border-radius: 1em;
+  margin-top: -0.5em;
 }
 
 .pageIndicator {
@@ -102,24 +121,62 @@
   color: #374151;
 }
 
-.controls {
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #374151;
-  padding: 0 1rem;
-}
-
 .prevButton,
 .nextButton {
-  font-size: 18px;
+  background: #ffffff4a;
+  background-image: url(/src/assets/right-arrow.svg);
+  background-position: center;
+  background-size: 30%;
+  background-repeat: no-repeat;
   transition: opacity 100ms ease-out;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  padding: 0;
+  top: 45vh;
+  transition: 200ms;
+}
+
+.prevButton {
+  left: 2vh;
+  transform: rotate(180deg);
+}
+
+.nextButton {
+  right: 2vh;
+}
+
+.prevButton:focus, .nextButton:focus {
+  outline: none;
+}
+
+.prevButton:hover:enabled, .nextButton:hover:enabled {
+  background: #ffffff96;
+  background-image: url(/src/assets/right-arrow.svg);
+  background-position: center;
+  background-size: 30%;
+  background-repeat: no-repeat;
+}
+
+/* hide buttons while on mobile since user can just scroll */
+@media (orientation: portrait) and (max-width: 480px) {
+  .prevButton,
+  .nextButton {
+    display: none;
+  }
+}
+@media (orientation: landscape) and (max-height: 480px) {
+  .prevButton,
+  .nextButton {
+    display: none;
+  }
 }
 
 .prevButton[disabled],
 .nextButton[disabled] {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .pagination {

@@ -14,28 +14,28 @@ export type PhotoData = {
 export const photosData: PhotoData[] = [
   {
     src: mushroom_1,
-    title: "Porcini",
+    title: '"Porcini"',
     subtitle: 'Watercolor — 8" x 10"',
     width: 636,
     height: 800,
   },
   {
     src: mushroom_2,
-    title: "Amanita",
+    title: '"Amanita"',
     subtitle: 'Watercolor — 8" x 10"',
     width: 618,
     height: 800,
   },
   {
     src: mushroom_3,
-    title: "Chanterelle",
+    title: '"Chanterelle"',
     subtitle: 'Watercolor — 8" x 10"',
     width: 629,
     height: 800,
   },
   {
     src: picos,
-    title: "Picos de Europa",
+    title: '"Picos de Europa"',
     subtitle: 'Watercolor — 14" x 12"',
     width: 800,
     height: 678,

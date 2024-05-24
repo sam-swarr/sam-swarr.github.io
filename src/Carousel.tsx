@@ -82,39 +82,18 @@ export const Carousel = <T extends any>({
       <div className={styles.pageIndicator}>
         {activePageIndex + 1} / {pages.length}
       </div>
-      {/* <div className={styles.controls}>
+      <div className={styles.controls}>
         <button
           disabled={activePageIndex === 0}
           onClick={() => prev()}
           className={styles.prevButton}
-        >
-          {String.fromCharCode(8592)}
-        </button>
-        <ol className={styles.pagination}>
-          {pages.map((_, i) => (
-            <li
-              key={i}
-              className={classNames(styles.paginationItem, {
-                [styles.paginationItemActive]: i === activePageIndex,
-              })}
-            >
-              <button
-                className={styles.paginationButton}
-                onClick={() => goTo(i, { behavior: "instant" })}
-              >
-                {i + 1}
-              </button>
-            </li>
-          ))}
-        </ol>
+        />
         <button
           disabled={activePageIndex === pages.length - 1}
           onClick={() => next()}
           className={styles.nextButton}
-        >
-          {String.fromCharCode(8594)}
-        </button>
-      </div> */}
+        />
+      </div>
     </div>
   );
 };
@@ -144,16 +123,18 @@ export const CarouselItem = ({
         [styles.itemActive]: isActive,
       })}
     >
-      {/* <div className={styles.itemText}>
-        <h2 className={styles.itemTitle}>{title}</h2>
-        <p className={styles.itemSubtitle}>{subtitle}</p>
-      </div> */}
-      <img
-        src={src}
-        className={styles.itemImage}
-        alt=""
-        onClick={(event) => event.stopPropagation()}
-      />
+      <div className={styles.itemImageTextWrapper}>
+        <img
+          src={src}
+          className={styles.itemImage}
+          alt=""
+          onClick={(event) => event.stopPropagation()}
+        />
+        <div className={styles.itemText}>
+          <div className={styles.itemTitle}>{title}</div>
+          <div className={styles.itemSubtitle}>{subtitle}</div>
+        </div>
+      </div>
     </li>
   );
 };
