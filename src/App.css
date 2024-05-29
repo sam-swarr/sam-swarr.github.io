@@ -1,9 +1,122 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app {
+  background-color: #C8DCE9;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+}
+
+.headerLeft, .headerCenter, .headerRight {
+  width: 33.33%;
+  height: 100%;
+}
+
+.headerCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
+
+.headerTitle {
+  color: #555555;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.headerTitle:hover {
+  color: #555555;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  padding-right: 3%;
+}
+
+.linkedinLogo, .githubLogo, .instagramLogo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 3vh;
+  height: 3vh;
+  padding-left: 1vh;
+  transition: 0.2s;
+}
+
+.linkedinLogo:hover, .githubLogo:hover, .instagramLogo:hover {
+  transform: scale(1.2);
+}
+
+.linkedinLogo {
+  background-image: url('./assets/linkedin_gray.png');
+}
+
+.githubLogo {
+  background-image: url('./assets/github_gray.svg');
+}
+
+.instagramLogo {
+  background-image: url('./assets/instagram_gray.png');
+}
+
+.body {
+  margin-left: 25vw;
+  margin-right: 25vw;
+  width: 50vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+}
+
+.body div {
+  background-color: #555555;
+  height: 100%;
+  width: 100%;
+}
+
+@media (orientation: portrait) and (max-width: 480px) {
+  .headerTitle {
+    font-size: 1.5em;
+  }
+
+  .headerRight {
+    justify-content: flex-end;
+  }
+
+  .linkedinLogo, .githubLogo, .instagramLogo {
+    width: 2vh;
+    height: 2vh;
+    padding-left: 0.7vh;
+  }
+
+  .body {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 90vh;
+  }
+}
+@media (orientation: landscape) and (max-height: 480px) {
+  .headerTitle {
+    font-size: 1.5em;
+  }
+
+  .linkedinLogo, .githubLogo, .instagramLogo {
+    width: 3vw;
+    height: 3vw;
+    padding-left: 1vw;
+  }
+}
+
+
 
 .logo {
   height: 6em;
