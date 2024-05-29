@@ -2,12 +2,14 @@ import halmonis_house_20_16 from "./assets/halmonis_house_20_16.jpeg";
 import miyajima_2_15_11 from "./assets/miyajima_2_15_11.jpg";
 import sunday_afternoon_16_20 from "./assets/sunday_afternoon_16_20.jpeg";
 import vernazza_5_7 from "./assets/vernazza_5_7.jpg";
+import pacific_20_16 from "./assets/pacific_20_16.jpg";
 import mushroom_1 from "./assets/mushroom_1.jpeg";
 import mushroom_2 from "./assets/mushroom_2.jpeg";
 import mushroom_3 from "./assets/mushroom_3.jpeg";
 import blueberries_16_12 from "./assets/blueberries_16_12.jpg";
 import babble_20_16 from "./assets/babble_20_16.jpg";
 import dreamscape_20_16 from "./assets/dreamscape_20_16.jpg";
+import mountain_study_20_16 from "./assets/mountain_study_20_16.jpg";
 import alishan_8_8 from "./assets/alishan_8_8.jpg";
 import taroko_8_8 from "./assets/taroko_8_8.jpg";
 import beitou_8_8 from "./assets/beitou_8_8.jpg";
@@ -80,6 +82,13 @@ export const photosData: PhotoData[] = [
     height: 800,
   },
   {
+    src: pacific_20_16,
+    title: '"Pacific"',
+    subtitle: 'Watercolor — 20" x 16"',
+    width: 800,
+    height: 600,
+  },
+  {
     src: mushroom_1,
     title: '"Porcini"',
     subtitle: 'Watercolor — 8" x 10"',
@@ -120,6 +129,13 @@ export const photosData: PhotoData[] = [
     subtitle: 'Watercolor — 20" x 16"',
     width: 800,
     height: 640,
+  },
+  {
+    src: mountain_study_20_16,
+    title: '"Mountain Study after J. Hunsung"',
+    subtitle: 'Watercolor — 20" x 16"',
+    width: 800,
+    height: 600,
   },
   {
     src: alishan_8_8,
