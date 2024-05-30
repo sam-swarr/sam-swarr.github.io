@@ -7,14 +7,36 @@ export const Home = () => {
     <div className={"home"}>
       <Header />
       <div className={"body"}>
-        <div className={"backgammonLink"}>Backgammon</div>
-        <div className={"artLink"} onClick={() => navigate("/art")}>
-          Art
+        <div className={"backgammonLink link"}>
+          <div className={"linkTitleWrapper"}>
+            <div className={"linkTitle"}>Backgammon</div>
+          </div>
         </div>
-        <div className={"curlingLink"}>Curling</div>
-        <div className={"codenamesLink"}>Codenames</div>
-        <div className={"ludumLink"}>Ludum Dare</div>
-        <div className={"crosswordLink"}>Crossword</div>
+        <div className={"artLink link"} onClick={() => navigate("/art")}>
+          <div className={"linkTitleWrapper"}>
+            <div className={"linkTitle"}>Art</div>
+          </div>
+        </div>
+        <div className={"curlingLink link"}>
+          <div className={"linkTitleWrapper"}>
+            <div className={"linkTitle"}>Curling</div>
+          </div>
+        </div>
+        <div className={"codenamesLink link"}>
+          <div className={"linkTitleWrapper"}>
+            <div className={"linkTitle"}>Codenames</div>
+          </div>
+        </div>
+        <div className={"ludumLink link"}>
+          <div className={"linkTitleWrapper"}>
+            <div className={"linkTitle"}>Ludum Dare</div>
+          </div>
+        </div>
+        <div className={"crosswordLink link"}>
+          <div className={"linkTitleWrapper"}>
+            <div className={"linkTitle"}>Crossword</div>
+          </div>
+        </div>
       </div>
     </div>
   );
