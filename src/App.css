@@ -1,7 +1,11 @@
+#root {
+  width: 100%;
+}
+
 .app {
   background-color: #C8DCE9;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .header {
@@ -26,6 +30,7 @@
   color: #555555;
   font-size: 2em;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .headerTitle:hover {
@@ -36,8 +41,8 @@
 
 .headerRight {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  padding-right: 3%;
 }
 
 .linkedinLogo, .githubLogo, .instagramLogo {
@@ -63,23 +68,36 @@
 
 .instagramLogo {
   background-image: url('./assets/instagram_gray.png');
+  padding-right: 2vw;
 }
 
 .body {
-  margin-left: 25vw;
-  margin-right: 25vw;
+  margin-left: auto;
+  margin-right: auto;
   width: 50vw;
-  height: 90vh;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-column-gap: 2%;
-  grid-row-gap: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
 }
 
 .body div {
   background-color: #555555;
-  height: 100%;
-  width: 100%;
+  background-clip: content-box;
+  padding: 1%;
+  height: 25vw;
+  width: 48%;
+  cursor: pointer;
+}
+
+.galleryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.galleryWrapper {
+  width: 60vw;
+  padding-bottom: 4vh;
 }
 
 @media (orientation: portrait) and (max-width: 480px) {
@@ -101,10 +119,27 @@
     margin-left: 10vw;
     margin-right: 10vw;
     width: 80vw;
-    height: 90vh;
+    padding-bottom: 4%;
+  }
+
+  .body div {
+    height: 80vw;
+    width: 100%;
+  }
+
+  .instagramLogo {
+    padding-right: 6%;
+  }
+
+  .galleryWrapper {
+    padding-bottom: 4vh;
   }
 }
 @media (orientation: landscape) and (max-height: 480px) {
+  .header {
+    padding-top: 3vh;
+  }
+
   .headerTitle {
     font-size: 1.5em;
   }
@@ -114,9 +149,15 @@
     height: 3vw;
     padding-left: 1vw;
   }
+
+  .galleryWrapper {
+    padding-top: 4vh;
+  }
+
+  .galleryWrapper {
+    padding-bottom: 8vh;
+  }
 }
-
-
 
 .logo {
   height: 6em;
@@ -152,11 +193,6 @@
 
 .read-the-docs {
   color: #888;
-}
-
-
-.galleryWrapper {
-  width: 60vw;
 }
 
 .reactModal {

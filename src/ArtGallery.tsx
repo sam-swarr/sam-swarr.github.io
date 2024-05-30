@@ -3,6 +3,7 @@ import Gallery, { PhotoClickHandler } from "react-photo-gallery";
 import ReactModal from "react-modal";
 import { photosData, PhotoData } from "./photosData";
 import { Carousel, CarouselItem } from "./Carousel";
+import Header from "./Header";
 
 ReactModal.setAppElement("#root");
 
@@ -33,30 +34,33 @@ export const ArtGallery = () => {
   }));
 
   return (
-    <div className={"galleryWrapper"}>
-      <Gallery photos={galleryPhotoData} onClick={openLightbox} />
-      <ReactModal
-        className={"reactModal"}
-        overlayClassName={"reactModalOverlay"}
-        isOpen={viewerIsOpen}
-        onRequestClose={closeLightbox}
-      >
-        <Carousel
-          items={carouselItems}
-          initialItemIndex={currentImage}
-          renderItem={({ item, index, isActive, isSnapPoint }) => (
-            <CarouselItem
-              key={index}
-              isSnapPoint={isSnapPoint}
-              isActive={isActive}
-              src={item.src}
-              title={item.title}
-              subtitle={item.subtitle}
-              onBackgroundClick={closeLightbox}
-            />
-          )}
-        />
-      </ReactModal>
+    <div className={"galleryContainer"}>
+      <Header />
+      <div className={"galleryWrapper"}>
+        <Gallery photos={galleryPhotoData} onClick={openLightbox} />
+        <ReactModal
+          className={"reactModal"}
+          overlayClassName={"reactModalOverlay"}
+          isOpen={viewerIsOpen}
+          onRequestClose={closeLightbox}
+        >
+          <Carousel
+            items={carouselItems}
+            initialItemIndex={currentImage}
+            renderItem={({ item, index, isActive, isSnapPoint }) => (
+              <CarouselItem
+                key={index}
+                isSnapPoint={isSnapPoint}
+                isActive={isActive}
+                src={item.src}
+                title={item.title}
+                subtitle={item.subtitle}
+                onBackgroundClick={closeLightbox}
+              />
+            )}
+          />
+        </ReactModal>
+      </div>
     </div>
   );
 };

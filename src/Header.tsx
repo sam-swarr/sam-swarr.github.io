@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 export const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className={"header"}>
       <div className={"headerLeft"} />
       <div className={"headerCenter"}>
-        <a className={"headerTitle"} href="https://sam-swarr.github.io/">
+        <div className={"headerTitle"} onClick={() => navigate("/")}>
           Sam Swarr
-        </a>
+        </div>
       </div>
       <div className={"headerRight"}>
         <a
