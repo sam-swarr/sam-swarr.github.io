@@ -10,9 +10,14 @@
 }
 
 .header {
+  background: #b3c6d3;
   display: flex;
-  height: 10vh;
+  height: 6vh;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  filter: drop-shadow(0px 2px 2px #00000022);
 }
 
 .headerLeft, .headerCenter, .headerRight {
@@ -78,6 +83,7 @@
   width: 50vw;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 1%;
   padding-bottom: 1%;
 }
 
@@ -87,6 +93,7 @@
   background-color: transparent;
   background-clip: content-box;
   background-blend-mode: screen;
+  color: #313131;
   filter: drop-shadow(4px 4px 2px #00000022);
   transition: background-color 1s;
   border-radius: 1vw;
@@ -138,6 +145,7 @@
 
 .galleryWrapper {
   width: 60vw;
+  padding-top: 2vh;
   padding-bottom: 4vh;
 }
 
@@ -193,7 +201,7 @@
 }
 @media (orientation: landscape) and (max-height: 480px) {
   .header {
-    padding-top: 3vh;
+    height: 10vh;
   }
 
   .headerTitle {
