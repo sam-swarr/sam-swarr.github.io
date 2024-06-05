@@ -88,7 +88,6 @@
 }
 
 .body .link {
-  background-image: url('./assets/art_thumb.jpg');
   background-size: contain;
   background-color: transparent;
   background-clip: content-box;
@@ -103,6 +102,10 @@
   cursor: pointer;
   position: relative;
   transition: 0.2s;
+}
+
+.link {
+  background-image: url('assets/art_thumb.jpg');
 }
 
 .body .link:hover {
@@ -151,7 +154,42 @@
 
 .artLink {
   background-image: url('./assets/art_thumb.jpg');
-  background-size: contain;
+}
+
+.backgammonLink {
+  background-image: url('./assets/backgammon/backgammon_thumb.jpg');
+}
+
+.backgammonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutBackgammonTitle {
+  font-size: 2em;
+  width: 50vw;
+}
+
+.aboutBackgammonWrapper {
+  width: 50vw;
+}
+
+.backgammonGameplayGif {
+  width: min(50vw, 780px);
+}
+
+.backgammonContainer .galleryWrapper {
+  width: 50vw;
+}
+
+.aboutBackgammonLinks {
+  width: 50vw;
+  text-align: center;
+}
+
+.backgammonPlayIcon {
+
 }
 
 @media (orientation: portrait) and (max-width: 480px) {
@@ -197,6 +235,19 @@
 
   .galleryWrapper {
     padding-bottom: 4vh;
+  }
+
+  .aboutBackgammonTitle {
+    font-size: 2em;
+    width: 70vw;
+  }
+
+  .aboutBackgammonWrapper {
+    width: 70vw;
+  }
+
+  .backgammonGameplayGif {
+    width: min(70vw, 780px);
   }
 }
 @media (orientation: landscape) and (max-height: 480px) {

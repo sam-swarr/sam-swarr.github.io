@@ -7,7 +7,10 @@ export const Home = () => {
     <div className={"home"}>
       <Header />
       <div className={"body"}>
-        <div className={"backgammonLink link"}>
+        <div
+          className={"backgammonLink link"}
+          onClick={() => navigate("/bkgmn")}
+        >
           <div className={"linkTitleWrapper"}>
             <div className={"linkTitle"}>Backgammon</div>
           </div>

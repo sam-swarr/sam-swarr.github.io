@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import ArtGallery from "./ArtGallery";
 import Home from "./Home";
+import BackgammonLanding from "./BackgammonLanding";
 
 function App() {
   const router = createBrowserRouter([
@@ -12,6 +13,10 @@ function App() {
     {
       path: "/art",
       element: <ArtGallery />,
+    },
+    {
+      path: "/bkgmn",
+      element: <BackgammonLanding />,
     },
   ]);
 
