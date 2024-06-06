@@ -105,6 +105,7 @@ export interface CarouselItemProps {
   readonly title: string;
   readonly subtitle: string;
   readonly onBackgroundClick: () => void;
+  readonly imageWrapperClassName: string;
 }
 
 export const CarouselItem = ({
@@ -114,6 +115,7 @@ export const CarouselItem = ({
   title,
   subtitle,
   onBackgroundClick,
+  imageWrapperClassName,
 }: CarouselItemProps) => {
   return (
     <li
@@ -123,7 +125,12 @@ export const CarouselItem = ({
         [styles.itemActive]: isActive,
       })}
     >
-      <div className={styles.itemImageTextWrapper}>
+      <div
+        className={classNames(
+          imageWrapperClassName,
+          styles.itemImageTextWrapper
+        )}
+      >
         <img
           src={src}
           className={styles.itemImage}

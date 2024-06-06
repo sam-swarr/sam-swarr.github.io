@@ -39,7 +39,7 @@ export const ArtGallery = () => {
       <div className={"galleryWrapper"}>
         <Gallery photos={galleryPhotoData} onClick={openLightbox} />
         <ReactModal
-          className={"reactModal"}
+          className={"reactModal artGallery"}
           overlayClassName={"reactModalOverlay"}
           isOpen={viewerIsOpen}
           onRequestClose={closeLightbox}
@@ -50,6 +50,7 @@ export const ArtGallery = () => {
             renderItem={({ item, index, isActive, isSnapPoint }) => (
               <CarouselItem
                 key={index}
+                imageWrapperClassName={"artGalleryCarouselItem"}
                 isSnapPoint={isSnapPoint}
                 isActive={isActive}
                 src={item.src}

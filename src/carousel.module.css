@@ -51,20 +51,12 @@
 }
 
 @media (orientation: landscape) {
-  .itemImageTextWrapper {
-    height: 85%;
-  }
-
   .itemImage {
     height: 100%;
   }
 }
 
 @media (orientation: portrait) {
-  .itemImageTextWrapper {
-    width: 85%;
-  }
-
   .itemImage {
     width: 100%;
   }
@@ -125,7 +117,7 @@
 .prevButton,
 .nextButton {
   background: #ffffff4a;
-  background-image: url(/src/assets/right-arrow.svg);
+  background-image: url(/src/assets/icons/right-arrow.svg);
   background-position: center;
   background-size: 30%;
   background-repeat: no-repeat;
@@ -155,7 +147,7 @@
 
 .prevButton:hover:enabled, .nextButton:hover:enabled {
   background: #ffffff96;
-  background-image: url(/src/assets/right-arrow.svg);
+  background-image: url(/src/assets/icons/right-arrow.svg);
   background-position: center;
   background-size: 30%;
   background-repeat: no-repeat;

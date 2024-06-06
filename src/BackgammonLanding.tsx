@@ -1,4 +1,4 @@
-import Gallery from "react-photo-gallery";
+import Gallery, { PhotoClickHandler } from "react-photo-gallery";
 import Header from "./Header";
 import gameplayGif from "./assets/backgammon/backgammon_gameplay.gif";
 import title from "./assets/backgammon/title.jpg";
@@ -7,8 +7,26 @@ import gameplay1 from "./assets/backgammon/gameplay1.jpg";
 import gameplay2 from "./assets/backgammon/gameplay2.jpg";
 import settings from "./assets/backgammon/settings.jpg";
 import gameplay3 from "./assets/backgammon/gameplay3.jpg";
+import ReactModal from "react-modal";
+import { Carousel, CarouselItem } from "./Carousel";
+import { useCallback, useState } from "react";
+
+ReactModal.setAppElement("#root");
 
 export const BackgammonLanding = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  const openLightbox = useCallback<PhotoClickHandler>((_event, { index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
+
   const galleryPhotoData = [
     {
       src: title,
@@ -42,6 +60,10 @@ export const BackgammonLanding = () => {
     },
   ];
 
+  const carouselItems = galleryPhotoData.map((p) => ({
+    src: p.src,
+  }));
+
   return (
     <div className={"backgammonContainer"}>
       <Header />
@@ -60,18 +82,50 @@ export const BackgammonLanding = () => {
         width={780}
       />
       <div className={"aboutBackgammonLinks"}>
-        <a href={"https://sam-swarr.github.io/backgammon/"}>
-          <span className={"backgammonPlayIcon"} />
-          click here to play
-        </a>
-        <a href={"https://github.com/sam-swarr/backgammon/"}>
-          <span className={"backgammonGithubIcon"} />
-          view source code
-        </a>
+        <div className={"aboutBackgammonLink"}>
+          <a href={"https://sam-swarr.github.io/backgammon/"}>
+            <span className={"linkIcon fa-solid fa-gamepad"} />
+            click here to play
+          </a>
+        </div>
+        <div className={"aboutBackgammonLink"}>
+          <a href={"https://github.com/sam-swarr/backgammon/"}>
+            <span className={"linkIcon fa-brands fa-github"} />
+            view source code
+          </a>
+        </div>
       </div>
       <div className={"galleryWrapper"}>
-        Screenshots
-        <Gallery photos={galleryPhotoData} />
+        <div className={"screenshotsTitleWrapper"}>Screenshots</div>
+        <Gallery
+          direction={"column"}
+          columns={2}
+          photos={galleryPhotoData}
+          onClick={openLightbox}
+        />
+        <ReactModal
+          className={"reactModal"}
+          overlayClassName={"reactModalOverlay"}
+          isOpen={viewerIsOpen}
+          onRequestClose={closeLightbox}
+        >
+          <Carousel
+            items={carouselItems}
+            initialItemIndex={currentImage}
+            renderItem={({ item, index, isActive, isSnapPoint }) => (
+              <CarouselItem
+                key={index}
+                imageWrapperClassName={"backgammonCarouselItem"}
+                isSnapPoint={isSnapPoint}
+                isActive={isActive}
+                src={item.src}
+                title={""}
+                subtitle={""}
+                onBackgroundClick={closeLightbox}
+              />
+            )}
+          />
+        </ReactModal>
       </div>
     </div>
   );
