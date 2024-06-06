@@ -70,8 +70,8 @@ export const BackgammonLanding = () => {
       <Header />
       <div className={"aboutBackgammonTitle"}>Backgammon</div>
       <div className={"aboutBackgammonWrapper"}>
-        This web-based implementation of the classic board game is implemented
-        using React / Typescript for the front end and Cloud Firestore for the
+        This web-based implementation of the classic board game was built using
+        React / Typescript for the front end and Cloud Firestore for the
         realtime backend. The adaptive UI supports both desktop and mobile. Two
         players can play locally on the same device, or you can create a
         networked game lobby and challenge a friend over the internet.
