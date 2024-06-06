@@ -4,6 +4,7 @@ import ReactModal from "react-modal";
 import { photosData, PhotoData } from "./photosData";
 import { Carousel, CarouselItem } from "./Carousel";
 import Header from "./Header";
+import Footer from "./Footer";
 
 ReactModal.setAppElement("#root");
 
@@ -62,6 +63,7 @@ export const ArtGallery = () => {
           />
         </ReactModal>
       </div>
+      <Footer />
     </div>
   );
 };

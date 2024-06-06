@@ -6,6 +6,7 @@ import mushroom_1 from "./assets/mushroom_1.jpeg";
 import mushroom_2 from "./assets/mushroom_2.jpeg";
 import mushroom_3 from "./assets/mushroom_3.jpeg";
 import blueberries_16_12 from "./assets/blueberries_16_12.jpg";
+import the_days_catch_7_5 from "./assets/the_days_catch_7_5.jpg";
 import babble_20_16 from "./assets/babble_20_16.jpg";
 import dreamscape_20_16 from "./assets/dreamscape_20_16.jpg";
 import mountain_study_20_16 from "./assets/mountain_study_20_16.jpg";
@@ -106,6 +107,13 @@ export const photosData: PhotoData[] = [
     src: blueberries_16_12,
     title: '"Blueberries"',
     subtitle: 'Watercolor — 16" x 12"',
+    width: 800,
+    height: 600,
+  },
+  {
+    src: the_days_catch_7_5,
+    title: '"The Day\'s Catch"',
+    subtitle: 'Watercolor — 7" x 5"',
     width: 800,
     height: 600,
   },

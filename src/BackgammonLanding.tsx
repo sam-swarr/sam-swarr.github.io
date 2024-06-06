@@ -10,6 +10,7 @@ import gameplay3 from "./assets/backgammon/gameplay3.jpg";
 import ReactModal from "react-modal";
 import { Carousel, CarouselItem } from "./Carousel";
 import { useCallback, useState } from "react";
+import Footer from "./Footer";
 
 ReactModal.setAppElement("#root");
 
@@ -127,6 +128,7 @@ export const BackgammonLanding = () => {
           />
         </ReactModal>
       </div>
+      <Footer />
     </div>
   );
 };
