@@ -72,7 +72,7 @@ export const CurlingLanding = () => {
       />
       <div className={"aboutLinks"}>
         <div className={"aboutLink"}>
-          <a href={"https://sam-swarr.github.io/curling-simulator/releases"}>
+          <a href={"https://github.com/sam-swarr/curling-simulator/releases/"}>
             <span className={"linkIcon fa-solid fa-download"} />
             click here to download
           </a>
