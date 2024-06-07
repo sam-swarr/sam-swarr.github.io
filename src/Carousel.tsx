@@ -48,10 +48,10 @@ export const Carousel = <T extends any>({
     const handleKeyDown = (e: KeyboardEvent) => {
       switch (e.key) {
         case "ArrowLeft":
-          next();
+          prev();
           return;
         case "ArrowRight":
-          prev();
+          next();
           return;
         default:
           return;
