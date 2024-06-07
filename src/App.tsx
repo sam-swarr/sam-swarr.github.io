@@ -1,27 +1,24 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import "./App.css";
 import ArtGallery from "./ArtGallery";
 import Home from "./Home";
 import BackgammonLanding from "./BackgammonLanding";
 
 function App() {
-  const router = createBrowserRouter(
-    [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/art",
-        element: <ArtGallery />,
-      },
-      {
-        path: "/bkgmn",
-        element: <BackgammonLanding />,
-      },
-    ],
-    { basename: "/" }
-  );
+  const router = createHashRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/art",
+      element: <ArtGallery />,
+    },
+    {
+      path: "/bkgmn",
+      element: <BackgammonLanding />,
+    },
+  ]);
 
   return (
     <div className="app">
