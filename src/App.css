@@ -153,6 +153,14 @@
   padding-bottom: 4vh;
 }
 
+.galleryWrapper img {
+  transition: 0.2s;
+}
+
+.galleryWrapper img:hover {
+  transform: scale(1.02);
+}
+
 .artLink {
   background-image: url('./assets/art_thumb.jpg');
 }
