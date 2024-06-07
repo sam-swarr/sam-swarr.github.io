@@ -66,10 +66,10 @@ export const BackgammonLanding = () => {
   }));
 
   return (
-    <div className={"backgammonContainer"}>
+    <div className={"landingContainer"}>
       <Header />
-      <div className={"aboutBackgammonTitle"}>Backgammon</div>
-      <div className={"aboutBackgammonWrapper"}>
+      <div className={"landingTitle"}>Backgammon</div>
+      <div className={"aboutLandingWrapper"}>
         This web-based implementation of the classic board game was built using
         React / Typescript for the front end and Cloud Firestore for the
         realtime backend. The adaptive UI supports both desktop and mobile. Two
@@ -77,19 +77,19 @@ export const BackgammonLanding = () => {
         networked game lobby and challenge a friend over the internet.
       </div>
       <img
-        className={"backgammonGameplayGif"}
+        className={"gameplayGif"}
         src={gameplayGif}
         alt={"Animation showing backgammon app gameplay."}
         width={780}
       />
-      <div className={"aboutBackgammonLinks"}>
-        <div className={"aboutBackgammonLink"}>
+      <div className={"aboutLinks"}>
+        <div className={"aboutLink"}>
           <a href={"https://sam-swarr.github.io/backgammon/"}>
             <span className={"linkIcon fa-solid fa-gamepad"} />
             click here to play
           </a>
         </div>
-        <div className={"aboutBackgammonLink"}>
+        <div className={"aboutLink"}>
           <a href={"https://github.com/sam-swarr/backgammon/"}>
             <span className={"linkIcon fa-brands fa-github"} />
             view source code
@@ -116,7 +116,7 @@ export const BackgammonLanding = () => {
             renderItem={({ item, index, isActive, isSnapPoint }) => (
               <CarouselItem
                 key={index}
-                imageWrapperClassName={"backgammonCarouselItem"}
+                imageWrapperClassName={"landingCarouselItem"}
                 isSnapPoint={isSnapPoint}
                 isActive={isActive}
                 src={item.src}

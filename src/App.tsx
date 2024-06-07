@@ -3,6 +3,7 @@ import "./App.css";
 import ArtGallery from "./ArtGallery";
 import Home from "./Home";
 import BackgammonLanding from "./BackgammonLanding";
+import CurlingLanding from "./CurlingLanding";
 
 function App() {
   const router = createHashRouter([
@@ -17,6 +18,10 @@ function App() {
     {
       path: "/bkgmn",
       element: <BackgammonLanding />,
+    },
+    {
+      path: "/curling",
+      element: <CurlingLanding />,
     },
   ]);
 

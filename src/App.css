@@ -5,6 +5,7 @@
 
 .app {
   background-color: #C8DCE9;
+  color: #555555;
   height: 100%;
   width: 100%;
 }
@@ -160,34 +161,38 @@
   background-image: url('./assets/backgammon/backgammon_thumb.jpg');
 }
 
-.backgammonContainer {
+.curlingLink {
+  background-image: url('./assets/curling/thumbnail.jpg');
+}
+
+.landingContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.aboutBackgammonTitle {
+.landingTitle {
   font-size: 2em;
   padding-top: 1em;
   width: 50vw;
 }
 
-.aboutBackgammonWrapper {
+.aboutLandingWrapper {
   padding-bottom: 1em;
   width: 50vw;
 }
 
-.backgammonGameplayGif {
+.gameplayGif {
   padding-top: 1em;
   padding-bottom: 1em;
   width: min(50vw, 780px);
 }
 
-.backgammonContainer .galleryWrapper {
+.landingContainer .galleryWrapper {
   width: 50vw;
 }
 
-.aboutBackgammonLinks {
+.aboutLinks {
   display: flex;
   flex-direction: column;
   width: 50vw;
@@ -196,7 +201,7 @@
   padding-bottom: 1em;
 }
 
-.aboutBackgammonLink {
+.aboutLink {
   font-size: 1.5em;
 }
 
@@ -261,24 +266,24 @@
     padding-bottom: 4vh;
   }
 
-  .aboutBackgammonTitle {
+  .landingTitle {
     font-size: 2em;
     width: 70vw;
   }
 
-  .aboutBackgammonWrapper {
+  .aboutLandingWrapper {
     width: 70vw;
   }
 
-  .backgammonGameplayGif {
+  .gameplayGif {
     width: min(70vw, 780px);
   }
 
-  .backgammonContainer .galleryWrapper {
+  .landingContainer .galleryWrapper {
     width: 70vw;
   }
 
-  .aboutBackgammonLink {
+  .aboutLink {
     font-size: 1em;
   }
 }
@@ -369,7 +374,7 @@
     height: 85%;
   }
 
-  .backgammonCarouselItem {
+  .landingCarouselItem {
     height: 70%;
   }
 }
@@ -379,7 +384,7 @@
     width: 85%;
   }
 
-  .backgammonCarouselItem {
+  .landingCarouselItem {
     width: 70%;
   }
 }
