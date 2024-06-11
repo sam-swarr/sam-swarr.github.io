@@ -177,6 +177,10 @@
   background-image: url('./assets/codenames/thumbnail.jpg');
 }
 
+.ludumLink {
+  background-image: url('./assets/ludumdare/thumbnail.jpg');
+}
+
 .landingContainer {
   display: flex;
   flex-direction: column;

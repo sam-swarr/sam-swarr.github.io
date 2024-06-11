@@ -37,7 +37,10 @@ export const Home = () => {
             <div className={"linkTitle"}>Codenames</div>
           </div>
         </div>
-        <div className={"ludumLink link"}>
+        <div
+          className={"ludumLink link"}
+          onClick={() => navigate("/ludumdare")}
+        >
           <div className={"linkTitleWrapper"}>
             <div className={"linkTitle"}>Ludum Dare</div>
           </div>
