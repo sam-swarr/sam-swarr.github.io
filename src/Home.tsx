@@ -29,7 +29,10 @@ export const Home = () => {
             <div className={"linkTitle"}>Curling</div>
           </div>
         </div>
-        <div className={"codenamesLink link"}>
+        <div
+          className={"codenamesLink link"}
+          onClick={() => navigate("/codenames")}
+        >
           <div className={"linkTitleWrapper"}>
             <div className={"linkTitle"}>Codenames</div>
           </div>
