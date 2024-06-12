@@ -1,7 +1,6 @@
 import Header from "./Header";
 import puzzle from "./assets/crossword/puzzle.png";
 import pdf from "./assets/crossword/puzzle.pdf";
-import puz from "./assets/crossword/puzzle.puz";
 import ReactModal from "react-modal";
 import Footer from "./Footer";
 
@@ -46,7 +45,7 @@ export const CrosswordLanding = () => {
           </a>
         </div>
         <div className={"aboutLink"}>
-          <a href={puz} download={"puzzle.puz"}>
+          <a href={"/puzzle.puz"} download={"puzzle.puz"}>
             <span className={"linkIcon fa-solid fa-download"} />
             download as .puz
           </a>
