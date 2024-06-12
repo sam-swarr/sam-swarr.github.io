@@ -6,6 +6,7 @@ import BackgammonLanding from "./BackgammonLanding";
 import CurlingLanding from "./CurlingLanding";
 import CodenamesLanding from "./CodenamesLanding";
 import LudumDareLanding from "./LudumDareLanding";
+import CrosswordLanding from "./CrosswordLanding";
 
 function App() {
   const router = createHashRouter([
@@ -32,6 +33,10 @@ function App() {
     {
       path: "/ludumdare",
       element: <LudumDareLanding />,
+    },
+    {
+      path: "/crossword",
+      element: <CrosswordLanding />,
     },
   ]);
 

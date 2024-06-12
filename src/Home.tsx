@@ -45,7 +45,10 @@ export const Home = () => {
             <div className={"linkTitle"}>Ludum Dare</div>
           </div>
         </div>
-        <div className={"crosswordLink link"}>
+        <div
+          className={"crosswordLink link"}
+          onClick={() => navigate("/crossword")}
+        >
           <div className={"linkTitleWrapper"}>
             <div className={"linkTitle"}>Crossword</div>
           </div>

@@ -181,6 +181,10 @@
   background-image: url('./assets/ludumdare/thumbnail.jpg');
 }
 
+.crosswordLink {
+  background-image: url('./assets/crossword/thumbnail.jpg');
+}
+
 .landingContainer {
   display: flex;
   flex-direction: column;
@@ -217,6 +221,10 @@
   padding-bottom: 1em;
 }
 
+.aboutLinks.crosswordLinks {
+  padding-top: 0;
+}
+
 .aboutLink {
   font-size: 1.5em;
 }
@@ -234,6 +242,11 @@
   text-align: center;
   color: #858585;
   font-size: 0.8em;
+  padding-bottom: 1em;
+}
+
+.crosswordImage {
+  padding-top: 1em;
   padding-bottom: 1em;
 }
 
@@ -302,6 +315,10 @@
   .aboutLink {
     font-size: 1em;
   }
+
+  .crosswordImage {
+    width: 85vw;
+  }
 }
 @media (orientation: landscape) and (max-height: 480px) {
   .header {
@@ -328,6 +345,10 @@
 
   .galleryWrapper {
     padding-bottom: 8vh;
+  }
+
+  .crosswordImage {
+    width: 60vw;
   }
 }
 
