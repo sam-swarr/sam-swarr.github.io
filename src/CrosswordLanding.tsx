@@ -20,16 +20,16 @@ export const CrosswordLanding = () => {
             href={
               "https://www.nytimes.com/2018/09/14/crosswords/how-to-make-a-crossword-puzzle-the-series.html"
             }
+            target="_blank"
           >
             this New York Times article series
           </a>{" "}
           on how to go about doing that, and I used the web-based editor,{" "}
-          <a href={"https://www.keiranking.com/apps/phil/"}>Phil</a>, to edit
-          and publish the puzzle.
-        </p>
-        <p>
-          The result is a puzzle that pays homage to our cat, Sugar, and all
-          felines in general.
+          <a href={"https://www.keiranking.com/apps/phil/"} target="_blank">
+            Phil
+          </a>
+          , to edit and publish the puzzle. The result is a puzzle that pays
+          homage to our cat, Sugar, and all felines in general.
         </p>
         <p>
           Print out the PDF or open the .puz file in your favorite puzzle

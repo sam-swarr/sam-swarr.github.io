@@ -68,13 +68,13 @@ export const CodenamesLanding = () => {
       </div>
       <div className={"aboutLinks"}>
         <div className={"aboutLink"}>
-          <a href={"https://codenames-189d7.web.app/"}>
+          <a href={"https://codenames-189d7.web.app/"} target="_blank">
             <span className={"linkIcon fa-solid fa-gamepad"} />
             click here to play
           </a>
         </div>
         <div className={"aboutLink"}>
-          <a href={"https://github.com/sam-swarr/codenames"}>
+          <a href={"https://github.com/sam-swarr/codenames"} target="_blank">
             <span className={"linkIcon fa-brands fa-github"} />
             view source code
           </a>

@@ -84,13 +84,13 @@ export const BackgammonLanding = () => {
       />
       <div className={"aboutLinks"}>
         <div className={"aboutLink"}>
-          <a href={"https://sam-swarr.github.io/backgammon/"}>
+          <a href={"https://sam-swarr.github.io/backgammon/"} target="_blank">
             <span className={"linkIcon fa-solid fa-gamepad"} />
             click here to play
           </a>
         </div>
         <div className={"aboutLink"}>
-          <a href={"https://github.com/sam-swarr/backgammon/"}>
+          <a href={"https://github.com/sam-swarr/backgammon/"} target="_blank">
             <span className={"linkIcon fa-brands fa-github"} />
             view source code
           </a>

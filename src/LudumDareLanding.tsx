@@ -69,19 +69,22 @@ export const LudumDareLanding = () => {
       />
       <div className={"aboutLinks"}>
         <div className={"aboutLink"}>
-          <a href={"https://swarrizard.itch.io/moon-harvest"}>
+          <a href={"https://swarrizard.itch.io/moon-harvest"} target="_blank">
             <span className={"linkIcon fa-solid fa-gamepad"} />
             click here to play
           </a>
         </div>
         <div className={"aboutLink"}>
-          <a href={"https://ldjam.com/events/ludum-dare/52/moon-harvest"}>
+          <a
+            href={"https://ldjam.com/events/ludum-dare/52/moon-harvest"}
+            target="_blank"
+          >
             <span className={"linkIcon fa-solid fa-globe"} />
             view Ludum Dare page
           </a>
         </div>
         <div className={"aboutLink"}>
-          <a href={"https://github.com/sam-swarr/ludumdare52"}>
+          <a href={"https://github.com/sam-swarr/ludumdare52"} target="_blank">
             <span className={"linkIcon fa-brands fa-github"} />
             view source code
           </a>
