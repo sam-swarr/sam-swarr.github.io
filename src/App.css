@@ -53,7 +53,7 @@
   align-items: center;
 }
 
-.linkedinLogo, .githubLogo, .instagramLogo {
+.linkedinLogo, .githubLogo {
   background-size: contain;
   background-repeat: no-repeat;
   width: 3vh;
@@ -62,7 +62,7 @@
   transition: 0.2s;
 }
 
-.linkedinLogo:hover, .githubLogo:hover, .instagramLogo:hover {
+.linkedinLogo:hover, .githubLogo:hover {
   transform: scale(1.2);
 }
 
@@ -72,10 +72,6 @@
 
 .githubLogo {
   background-image: url('./assets/icons/github_gray.svg');
-}
-
-.instagramLogo {
-  background-image: url('./assets/icons/instagram_gray.png');
   margin-right: 2vw;
 }
 
@@ -264,7 +260,7 @@
     justify-content: flex-end;
   }
 
-  .linkedinLogo, .githubLogo, .instagramLogo {
+  .linkedinLogo, .githubLogo {
     width: 2vh;
     height: 2vh;
     padding-left: 0.7vh;
@@ -293,7 +289,7 @@
     width: 100%;
   }
 
-  .instagramLogo {
+  .githubLogo {
     margin-right: 6%;
   }
 
@@ -339,7 +335,7 @@
     font-size: 1.5em;
   }
 
-  .linkedinLogo, .githubLogo, .instagramLogo {
+  .linkedinLogo, .githubLogo {
     width: 3vw;
     height: 3vw;
     padding-left: 1vw;
