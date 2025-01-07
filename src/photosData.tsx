@@ -1,7 +1,11 @@
+import belvedere_4_3 from "./assets/belvedere_4_3.jpg";
 import halmonis_house_20_16 from "./assets/halmonis_house_20_16.jpeg";
 import sunday_afternoon_16_20 from "./assets/sunday_afternoon_16_20.jpeg";
+import hellgate_4_5 from "./assets/hell_gate_4_5.jpg";
 import vernazza_5_7 from "./assets/vernazza_5_7.jpg";
 import pacific_20_16 from "./assets/pacific_20_16.jpg";
+import mike_by_the_sea_5_4 from "./assets/mike_by_the_sea_5_4.jpg";
+import porto_4_3 from "./assets/porto_4_3.jpg";
 import mushroom_1 from "./assets/mushroom_1.jpeg";
 import mushroom_2 from "./assets/mushroom_2.jpeg";
 import mushroom_3 from "./assets/mushroom_3.jpeg";
@@ -55,6 +59,13 @@ export type PhotoData = {
 
 export const photosData: PhotoData[] = [
   {
+    src: belvedere_4_3,
+    title: '"Belvedere Castle"',
+    subtitle: 'Watercolor — 20" x 15"',
+    width: 800,
+    height: 600,
+  },
+  {
     src: halmonis_house_20_16,
     title: '"Halmoni\'s House"',
     subtitle: 'Watercolor — 20" x 16"',
@@ -69,6 +80,13 @@ export const photosData: PhotoData[] = [
     height: 800,
   },
   {
+    src: hellgate_4_5,
+    title: '"Hell Gate Bridge"',
+    subtitle: 'Watercolor — 15" x 20"',
+    width: 640,
+    height: 800,
+  },
+  {
     src: vernazza_5_7,
     title: '"Vernazza"',
     subtitle: 'Watercolor — 5" x 7"',
@@ -79,6 +97,20 @@ export const photosData: PhotoData[] = [
     src: pacific_20_16,
     title: '"Pacific"',
     subtitle: 'Watercolor — 20" x 16"',
+    width: 800,
+    height: 600,
+  },
+  {
+    src: mike_by_the_sea_5_4,
+    title: '"Mike By The Sea"',
+    subtitle: 'Watercolor — 11" x 15"',
+    width: 640,
+    height: 800,
+  },
+  {
+    src: porto_4_3,
+    title: '"Porto"',
+    subtitle: 'Watercolor — 20" x 15"',
     width: 800,
     height: 600,
   },
